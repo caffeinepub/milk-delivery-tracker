@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Cabinet Grotesk (Display / Headings) ─────────────────────────── */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Figtree (Body) ─────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* ── Background / Foreground ─────────────────────────────────────── */
+    --background: 0.975 0.005 85;
+    --foreground: 0.18 0.025 240;
+
+    /* ── Card / Popover ─────────────────────────────────────────────── */
+    --card: 0.99 0.002 80;
+    --card-foreground: 0.18 0.025 240;
+    --popover: 0.99 0.002 80;
+    --popover-foreground: 0.18 0.025 240;
+
+    /* ── Primary: Deep Slate ───────────────────────────────────────── */
+    --primary: 0.22 0.04 250;
+    --primary-foreground: 0.97 0.005 80;
+
+    /* ── Secondary ─────────────────────────────────────────────────── */
+    --secondary: 0.93 0.01 220;
+    --secondary-foreground: 0.22 0.04 250;
+
+    /* ── Muted ──────────────────────────────────────────────────────── */
+    --muted: 0.94 0.008 220;
+    --muted-foreground: 0.5 0.02 240;
+
+    /* ── Accent: Warm Teal ─────────────────────────────────────────── */
+    --accent: 0.88 0.08 185;
+    --accent-foreground: 0.15 0.06 200;
+
+    /* ── Destructive ────────────────────────────────────────────────── */
+    --destructive: 0.58 0.22 25;
+    --destructive-foreground: 0.99 0.005 80;
+
+    /* ── Border / Input / Ring ──────────────────────────────────────── */
+    --border: 0.88 0.015 220;
+    --input: 0.88 0.015 220;
+    --ring: 0.52 0.1 185;
+
+    /* ── Status Colors ───────────────────────────────────────────────── */
+    --status-delivered: 0.72 0.16 155;
+    --status-delivered-bg: 0.94 0.06 155;
+    --status-skipped: 0.7 0.14 65;
+    --status-skipped-bg: 0.96 0.06 75;
+    --status-holiday: 0.58 0.22 25;
+    --status-holiday-bg: 0.96 0.08 30;
+    --status-pending: 0.56 0.02 240;
+    --status-pending-bg: 0.94 0.008 220;
+
+    /* ── Chart ───────────────────────────────────────────────────────── */
+    --chart-1: 0.52 0.18 185;
+    --chart-2: 0.68 0.16 155;
+    --chart-3: 0.7 0.14 65;
+    --chart-4: 0.58 0.22 25;
+    --chart-5: 0.55 0.18 285;
+
+    /* ── Sidebar ────────────────────────────────────────────────────── */
+    --sidebar: 0.2 0.035 250;
+    --sidebar-foreground: 0.88 0.015 220;
+    --sidebar-primary: 0.65 0.12 185;
+    --sidebar-primary-foreground: 0.15 0.06 200;
+    --sidebar-accent: 0.28 0.04 250;
+    --sidebar-accent-foreground: 0.92 0.01 220;
+    --sidebar-border: 0.3 0.04 250;
+    --sidebar-ring: 0.52 0.1 185;
+  }
+
+  .dark {
+    --background: 0.14 0.025 250;
+    --foreground: 0.93 0.01 220;
+    --card: 0.18 0.03 250;
+    --card-foreground: 0.93 0.01 220;
+    --popover: 0.22 0.03 250;
+    --popover-foreground: 0.93 0.01 220;
+    --primary: 0.65 0.12 185;
+    --primary-foreground: 0.12 0.04 200;
+    --secondary: 0.24 0.04 250;
+    --secondary-foreground: 0.93 0.01 220;
+    --muted: 0.24 0.04 250;
+    --muted-foreground: 0.6 0.02 240;
+    --accent: 0.3 0.06 185;
+    --accent-foreground: 0.85 0.1 185;
+    --destructive: 0.64 0.22 25;
+    --destructive-foreground: 0.99 0.005 80;
+    --border: 0.28 0.04 250;
+    --input: 0.28 0.04 250;
+    --ring: 0.52 0.1 185;
+    --status-delivered: 0.72 0.16 155;
+    --status-delivered-bg: 0.22 0.07 155;
+    --status-skipped: 0.7 0.14 65;
+    --status-skipped-bg: 0.22 0.06 75;
+    --status-holiday: 0.64 0.22 25;
+    --status-holiday-bg: 0.22 0.08 30;
+    --status-pending: 0.56 0.02 240;
+    --status-pending-bg: 0.24 0.04 250;
+    --chart-1: 0.65 0.18 185;
+    --chart-2: 0.72 0.16 155;
+    --chart-3: 0.7 0.14 65;
+    --chart-4: 0.64 0.22 25;
+    --chart-5: 0.62 0.18 285;
+    --sidebar: 0.12 0.025 250;
+    --sidebar-foreground: 0.88 0.015 220;
+    --sidebar-primary: 0.65 0.12 185;
+    --sidebar-primary-foreground: 0.12 0.04 200;
+    --sidebar-accent: 0.2 0.04 250;
+    --sidebar-accent-foreground: 0.92 0.01 220;
+    --sidebar-border: 0.22 0.04 250;
+    --sidebar-ring: 0.52 0.1 185;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .status-delivered {
+    color: oklch(var(--status-delivered));
+    background-color: oklch(var(--status-delivered-bg));
+  }
+  .status-skipped {
+    color: oklch(var(--status-skipped));
+    background-color: oklch(var(--status-skipped-bg));
+  }
+  .status-holiday {
+    color: oklch(var(--status-holiday));
+    background-color: oklch(var(--status-holiday-bg));
+  }
+  .status-pending {
+    color: oklch(var(--status-pending));
+    background-color: oklch(var(--status-pending-bg));
+  }
+  .sidebar-nav-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors;
+    color: oklch(var(--sidebar-foreground) / 0.7);
+  }
+  .sidebar-nav-item:hover {
+    color: oklch(var(--sidebar-foreground));
+    background-color: oklch(var(--sidebar-accent));
+  }
+  .sidebar-nav-item.active {
+    color: oklch(var(--sidebar-primary));
+    background-color: oklch(var(--sidebar-accent));
+    font-weight: 600;
+  }
+}

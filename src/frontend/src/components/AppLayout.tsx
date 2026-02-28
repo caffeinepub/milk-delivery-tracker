@@ -1,0 +1,13 @@
+import { Outlet } from "@tanstack/react-router";
+import { AppSidebar } from "./AppSidebar";
+
+export function AppLayout() {
+  return (
+    <div className="flex min-h-screen">
+      <AppSidebar />
+      <main className="flex-1 min-w-0 overflow-auto">
+        <Outlet />
+      </main>
+    </div>
+  );
+}
